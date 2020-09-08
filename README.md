@@ -4,7 +4,7 @@ A collection of data science utility functions.
 ## Installation
 
 ```
-pip install -i https://test.pypi.org/simple/ Lambdata-mark==0.0.2
+pip install -i https://test.pypi.org/simple/ Lambdata-mark==0.0.1
 ```
 
 ## Usage
