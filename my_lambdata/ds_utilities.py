@@ -57,3 +57,24 @@ if __name__ == '__main__':
     X_train, X_val, X_test, y_train, y_val, y_test = train_validation_test_split(df, features=['ash', 'hue'], target='target')
 
     # breakpoint()
+
+
+def address_column_split(a):
+    """
+    Extracts city and state in an address and provides separate columns for each
+    """
+    asplit = a.split(",")
+    city = asplit[0].split()[-1]
+    state = asplit[1].split()[0]
+    return city, state
+
+if __name__ == '__main__':
+
+    data = pd.DataFrame({
+        'Address': ['xxx Antioch, CA',
+        'xxx Mobile, AL',
+        'xxx Wylie, TX WO-65758',
+        'zzz Waxahachie, TX WO-999786']})
+    print(data.join(data['Address'].apply(lambda x: pd.Series(address_column_split(x), index=["City", "State"]))))
+
+    breakpoint()
