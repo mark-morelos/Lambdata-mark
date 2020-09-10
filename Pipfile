@@ -6,10 +6,13 @@ verify_ssl = true
 [dev-packages]
 twine = "*"
 jupyter = "*"
+pytest = "*"
 
 [packages]
 pandas = "*"
 numpy = "*"
+requests = "*"
+beautifulsoup4 = "*"
 
 [requires]
 python_version = "3.7"
